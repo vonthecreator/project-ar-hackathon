@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Spinner from "./Spinner";
-import fundAndUpload from "../utils/fundAndUpload";
 import { Othent } from 'othent';
 
 
@@ -94,11 +93,42 @@ export const BundlrUploader: React.FC = () => {
 		if (derivation) tags.push({ name: "Derivation", value: derivation });
 
 		// Conditionally fund and upload the file
-		const txId = await fundAndUpload(selectedFile, tags, othent);
-		console.log(`File uploaded ==> https://arweave.net/${txId}`);
-		setMessage(`File <a class="underline" target="_blank" href="https://arweave.net/${txId}">uploaded</a>`);
-		// Reset the UI spinner
-		setTxProcessing(false);		
+
+		try {
+	// 		const bundlr = await getBundlr();
+
+			// const dataStream = fileReaderStream(selectedFile);
+	// 		const price = await bundlr.getPrice(selectedFile?.size);
+	// 		const balance = await bundlr.getLoadedBalance();
+
+	// 		if (price.isGreaterThanOrEqualTo(balance)) {
+	// 			console.log("Funding node.");
+	// 			await bundlr.fund(price);
+	// 		} else {
+	// 			console.log("Funding not needed, balance sufficient.");
+	// 		}
+
+      const signedTransaction = await othent.signTransactionBundlr({
+        othentFunction: 'uploadData', 
+        data: selectedFile,
+        tags: tags
+      });
+
+      const response = await othent.sendTransactionBundlr(signedTransaction);
+      console.log(response)
+
+      let txId = response.transactionId
+
+      console.log(`File uploaded ==> https://arweave.net/${txId}`);
+			setMessage(`File <a class="underline" target="_blank" href="https://arweave.net/${txId}">uploaded</a>`);
+			// Reset the UI spinner
+			setTxProcessing(false);		
+
+      return response.transactionId
+    } catch (error) {
+    	console.log(error)
+    	return error
+    }
 	};
 
 

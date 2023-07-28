@@ -10,7 +10,6 @@
     "fundBundlr": "arkb fund-bundler --use-bundler https://node2.bundlr.network -w wallet.json $AMOUNT",
     "balance": "arkb balance --w wallet.json --use-bundler https://node2.bundlr.network",
     "deploy": "next build && arkb deploy dist --wallet wallet.json --use-bundler https://node2.bundlr.network"
-
   },
   "dependencies": {
     "@bundlr-network/client": "^0.11.9",
