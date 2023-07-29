@@ -3,8 +3,8 @@
 
 ## SEC #1  --> // Description, Examples & Objective
 
-#### WHAT: A repository for arweave hackathon {https://is.gd/auyDRe} 
-> ** A Solutions that uses most if not all the bouties that are being asked 
+#### A repository for arweave hackathon {https://is.gd/auyDRe} 
+> **A Solutions that uses most if not all the bouties that are being asked 
 to complete as a part of the Arweave hackathon. The goal being to maximize
 on the value we accumilate from pricez and the application features themselves...**
 
@@ -29,7 +29,7 @@ on the value we accumilate from pricez and the application features themselves..
 * Monospace + Sans-serif font --> {IBM Plex Mono + Arial/Arial-black}
 * Lots of White-space --> minimal + elegance
 * Dual-tone --> { black & white }
-* >>> The goal is to focus on key features that make unsplash great (minimalistic & ease-of-use <color,structure & layout>)
+>>> The goal is to focus on key features that make unsplash great (minimalistic & ease-of-use <color,structure & layout>)
 
 ### Implementation Playbook
 - [] Upload raw (images) object via bundlr (speed + standadization)
@@ -39,7 +39,7 @@ on the value we accumilate from pricez and the application features themselves..
 - [] adding more soon...
 
 
-### Acronyms & distincitons (meaning-of-things)
+### Acronyms & Distinctions (meaning-of-things)
 * Transactions => all activity happening on the app <use ArNS to map activity>
 * Users => record of all valid wallets registered on the app as active accounts 
 * Content => What we are here for <content can be incentivised [ArNS:listen for trigger -> process wallet-2-wallet transactions]> 
@@ -47,9 +47,11 @@ on the value we accumilate from pricez and the application features themselves..
 
 ## SEC #3 --> //Intent & Non-logical 
 
-*** a modular tokenized-photo-sharing app with security and simplicity in mind + goal of permanancy >>> your work deserves a spotlight!.***
+** a modular tokenized-photo-sharing app with security and simplicity in mind + goal of permanancy >>> your work deserves a spotlight!.**
 
 
 
 
-### Proposal: { Feel free to add suggestions/comments/implementation-playbook/idea }
+### Proposal: 
+> Feel free to add suggestions/comments/implementation-playbook/idea 
+
