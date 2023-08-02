@@ -3,6 +3,8 @@
 # dependencies
 
 /node_modules
+*/*/node_modules
+*/*/.next
 /.pnp
 .pnp.js
 
@@ -62,4 +64,6 @@ yarn-error.log\*
 .vercel
 
 wallet.json
-dist
+*/*wallet.json
+*/*dist
+/dist

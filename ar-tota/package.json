@@ -1,0 +1,34 @@
+{
+  "name": "project-ar-tota",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "fundBundlr": "arkb fund-bundler --use-bundler https://node2.bundlr.network -w wallet.json $AMOUNT",
+    "balance": "arkb balance --w wallet.json --use-bundler https://node2.bundlr.network",
+    "deploy": "next build && arkb deploy dist --wallet wallet.json --use-bundler https://node2.bundlr.network"
+
+  },
+  "dependencies": {
+    "@bundlr-network/client": "^0.11.9",
+    "@othent/react-components": "^0.0.5",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "ethers": "^6.6.7",
+    "filereader-stream": "^2.0.0",
+    "next": "13.4.12",
+    "othent": "^1.0.638",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
+  }
+}
