@@ -49,6 +49,14 @@ export const BundlrUploader: React.FC = () => {
     console.log(message);
   };
 
+  const handlePolyLogInClick = async () => {
+    const logIn = await othent.logIn()
+    const message = 'User Logged In: ' + JSON.stringify(logIn);
+    console.log(message);
+  };
+
+  
+
 	// Called when a file is selected
 	const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
 		if (event.target.files && event.target.files[0]) {
@@ -142,7 +150,9 @@ export const BundlrUploader: React.FC = () => {
 		
 
 {/*This is the login button*/}
-		<button onClick={handleLogInClick}>login</button>
+		<button onClick={handleLogInClick}>Othent Login</button>
+		<br />
+		<button onClick={handlePolyLogInClick}>Bundlr Login</button>
 
 			<div className="pr-4 mt-5">
 				<div className="rounded-lg shadow-2xl">
